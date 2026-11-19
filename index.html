@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café & Horno El Mirador</title>
+<meta name="description" content="Café & Horno El Mirador: café recién hecho y pan de horno todos los días.">
+<style>
+  :root {
+    --crema: #fdf6ec;
+    --cafe: #4a2c1a;
+    --terracota: #c2623a;
+    --terracota-oscuro: #a44d2a;
+    --miel: #e8a54b;
+    --borde: #ecdcc6;
+    --texto: #3b2a20;
+    --suave: #7a6556;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+  .contenedor { width: min(1040px, 100% - 2rem); margin-inline: auto; }
+
+  header {
+    background: linear-gradient(160deg, var(--cafe) 0%, #6b3f26 100%);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem 4.5rem;
+  }
+  header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    letter-spacing: .5px;
+    line-height: 1.15;
+  }
+  header p {
+    margin-top: .9rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    color: #f6e3c8;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--terracota);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: .85rem 1.6rem;
+    border-radius: 999px;
+    transition: background .2s;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--terracota-oscuro); }
+  header .btn { margin-top: 1.8rem; background: var(--miel); color: var(--cafe); }
+  header .btn:hover { background: #f0b762; }
+
+  section { padding: 3.5rem 0; }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--cafe);
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    text-align: center;
+    margin-bottom: .4rem;
+  }
+  .sub { text-align: center; color: var(--suave); margin-bottom: 2rem; }
+
+  .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .tarjeta {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: 0 2px 8px rgba(74, 44, 26, .06);
+  }
+  .tarjeta h3 { color: var(--cafe); font-size: 1.2rem; margin-bottom: .4rem; }
+  .tarjeta p { color: var(--suave); font-size: .98rem; }
+  .precio {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--terracota);
+  }
+
+  .info { background: #f6ead8; }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+  .caja {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 1.6rem;
+  }
+  .caja h3 { color: var(--cafe); margin-bottom: .8rem; }
+  .caja ul { list-style: none; }
+  .caja li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .45rem 0;
+    border-bottom: 1px dashed var(--borde);
+  }
+  .caja li:last-child { border-bottom: none; }
+  .caja li span:last-child { color: var(--suave); text-align: right; }
+  .caja p { color: var(--suave); }
+  .caja p strong { color: var(--texto); }
+
+  .contacto { text-align: center; }
+  .contacto p { color: var(--suave); margin-bottom: 1.4rem; }
+  .btn-wa { background: #25a244; font-size: 1.05rem; }
+  .btn-wa:hover, .btn-wa:focus-visible { background: #1e8a39; }
+
+  footer {
+    background: var(--cafe);
+    color: #f1dfc6;
+    text-align: center;
+    padding: 1.4rem 1rem;
+    font-size: .95rem;
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 3rem 1rem 3.5rem; }
+    section { padding: 2.5rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="contenedor">
+    <h1>Café &amp; Horno El Mirador</h1>
+    <p>Bienvenido: café recién hecho y pan caliente, como en casa.</p>
+    <a class="btn" href="#destacados">Ver productos</a>
+  </div>
+</header>
+
+<main>
+  <section id="destacados">
+    <div class="contenedor">
+      <h2>Productos destacados</h2>
+      <p class="sub">Lo que más piden nuestros clientes.</p>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Café de la casa</h3>
+          <p>Café de origen colombiano, tostado y preparado al momento.</p>
+          <div class="precio">$4.500 COP</div>
+        </article>
+        <article class="tarjeta">
+          <h3>Pan de bono</h3>
+          <p>Horneado cada mañana, suave y con queso fresco.</p>
+          <div class="precio">$2.500 COP</div>
+        </article>
+        <article class="tarjeta">
+          <h3>Croissant de mantequilla</h3>
+          <p>Hojaldrado, dorado y recién salido del horno.</p>
+          <div class="precio">$6.000 COP</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="visitanos">
+    <div class="contenedor">
+      <h2>Visítanos</h2>
+      <p class="sub">Te esperamos con la puerta abierta.</p>
+      <div class="info-grid">
+        <div class="caja">
+          <h3>Horarios</h3>
+          <ul>
+            <li><span>Lunes a viernes</span><span>7:00 a. m. – 7:00 p. m.</span></li>
+            <li><span>Sábados</span><span>8:00 a. m. – 8:00 p. m.</span></li>
+            <li><span>Domingos y festivos</span><span>8:00 a. m. – 2:00 p. m.</span></li>
+          </ul>
+        </div>
+        <div class="caja">
+          <h3>Ubicación</h3>
+          <p><strong>Café &amp; Horno El Mirador</strong></p>
+          <p>Carrera 00 # 00-00<br>Barrio El Mirador</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <div class="contenedor">
+      <h2>Haz tu pedido</h2>
+      <p>Escríbenos y te respondemos enseguida.</p>
+      <a class="btn btn-wa" href="https://wa.me/573142347201" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Café &amp; Horno El Mirador
+</footer>
+
+</body>
+</html>
